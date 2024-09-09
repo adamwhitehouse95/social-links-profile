@@ -1,31 +1,60 @@
-*, *::before, *::after {
-    box-sizing: border-box;
-  }
-  * {
-    margin: 0;
-  }
-  body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-    height: 100vh;
-  }
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
-  input, button, textarea, select {
-    font: inherit;
-  }
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin: 0;
+}
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+body {
+  min-height: 100svh;
+  line-height: 1.5;
+}
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+textarea:not([rows]) {
+  min-height: 10em;
+}
+:target {
+  scroll-margin-block: 5ex;
+}
   @font-face {
     font-family: Inter;
     src: url(./assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
   }
   main {
     background-color: #141414;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,8 +68,6 @@
     background-color: #1f1f1f;
     text-align: center;
     color: #fff;
-    flex: 0 1 auto;
-    flex-wrap: wrap;
   }
   .div-buttons {
     display: flex;
@@ -57,7 +84,6 @@
     margin: 24px 0;
     font-size: 0.9rem;
     line-height: 150%;
-    letter-spacing: 0rem;
   }
   .div-name {
     display: flex;
@@ -71,7 +97,6 @@
     border-radius: 8px;
     padding: 12px 94.5px;
     line-height: 150%;
-    letter-spacing: 0rem;
     font-size: 0.9rem;
     font-weight: bold;
     transition: 0.5s;
@@ -79,19 +104,20 @@
   .p-location {
     font-size: 0.9rem;
     line-height: 150%;
-    letter-spacing: 0rem;
     color: #c4f82a;
     font-weight: bold;
   }
   h1 {
     font-size: 1.5rem;
-    letter-spacing: 0rem;
     line-height: 150%;
   }
   button:hover {
     background-color: #c4f82a;
     color: #1f1f1f;
     transition: 0.5s;
+  }
+  a {
+    text-decoration: none;
   }
 
   
